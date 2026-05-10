@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Culver City Surgical Specialists — Expert care. Personal touch.</title>
+<template id="__bundler_thumbnail" data-bg-color="#1e4c4f">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1e4c4f"/>
+    <circle cx="600" cy="400" r="180" fill="none" stroke="#4bbec6" stroke-width="14"/>
+    <path d="M460 400 L530 400 L560 340 L600 470 L640 360 L670 400 L740 400" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</template>
+<style>
+/* ---------- Fonts ---------- */
+@font-face { font-family: "Fraunces"; src: url("reference/fonts/fraunces-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("reference/fonts/fraunces-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("reference/fonts/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("reference/fonts/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("reference/fonts/inter-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+
+/* ---------- Tokens ---------- */
+:root {
+  --white: #ffffff;
+  --neutral-lightest: #f2f2f2;
+  --neutral-lighter: #d9d9d9;
+  --neutral-light: #b3b3b3;
+  --neutral: #808181;
+  --neutral-dark: #4d4e4f;
+  --neutral-darker: #1b1c1d;
+  --neutral-darkest: #020304;
+  --pelorous-lightest: #edf8f9;
+  --pelorous-lighter: #dbf2f3;
+  --pelorous-light: #81d1d7;
+  --pelorous: #4bbec6;
+  --pelorous-dark: #3c989e;
+  --pelorous-darker: #1e4c4f;
+  --pelorous-darkest: #16393b;
+  --tan-lightest: #faf7f3;
+  --tan-lighter: #f6efe7;
+  --tan-light: #e0c7ad;
+  --tan: #d4af8a;
+  --tan-dark: #a98c6e;
+  --spring-wood: #f9f7f4;
+
+  --radius-button: 0.375rem;
+  --radius-card: 0.5rem;
+  --radius-image: 0.5rem;
+
+  --container: 80rem;
+
+  --text-h1: 3rem;
+  --text-h2: 2.75rem;
+  --text-h3: 2rem;
+  --text-h4: 1.5rem;
+  --text-h5: 1.25rem;
+  --text-h6: 1.125rem;
+  --text-large: 1.125rem;
+  --text-medium: 1rem;
+  --text-regular: 0.875rem;
+  --text-small: 0.75rem;
+}
+@media (min-width: 992px) {
+  :root {
+    --text-h1: 5.25rem;
+    --text-h2: 3.75rem;
+    --text-h3: 3rem;
+    --text-h4: 2.5rem;
+    --text-h5: 2rem;
+    --text-h6: 1.625rem;
+    --text-large: 1.625rem;
+    --text-medium: 1.25rem;
+    --text-regular: 1.125rem;
+    --text-small: 1rem;
+  }
+}
+
+/* ---------- Schemes ---------- */
+.scheme-1 { --bg: var(--white); --fg: var(--neutral-darkest); --border: rgba(2,3,4,0.15); }
+.scheme-2 { --bg: var(--pelorous-darkest); --fg: var(--white); --border: rgba(255,255,255,0.2); }
+.scheme-3 { --bg: var(--pelorous-darker); --fg: var(--white); --border: rgba(255,255,255,0.2); }
+.scheme-4 { --bg: var(--neutral-lighter); --fg: var(--neutral-darkest); --border: rgba(2,3,4,0.15); }
+.scheme-1, .scheme-2, .scheme-3, .scheme-4 { background-color: var(--bg); color: var(--fg); }
+
+/* ---------- Reset / base ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: var(--text-regular);
+  line-height: 1.6;
+  color: var(--neutral-darkest);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,h5,h6 { font-family: "Fraunces", serif; font-weight: 500; letter-spacing: 0.01em; margin: 0; line-height: 1.15; }
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; }
+
+.h1 { font-size: var(--text-h1); }
+.h2 { font-size: var(--text-h2); line-height: 1.1; }
+.h3 { font-size: var(--text-h3); line-height: 1.15; }
+.h4 { font-size: var(--text-h4); line-height: 1.2; }
+.h5 { font-size: var(--text-h5); line-height: 1.2; }
+.h6 { font-size: var(--text-h6); line-height: 1.2; }
+
+.t-large { font-size: var(--text-large); line-height: 1.5; }
+.t-medium { font-size: var(--text-medium); line-height: 1.6; }
+.t-small { font-size: var(--text-small); }
+.semibold { font-weight: 600; }
+.eyebrow { font-weight: 600; font-size: var(--text-medium); }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 5%; }
+.section { padding: 4rem 5%; }
+@media (min-width: 768px) { .section { padding: 6rem 5%; } }
+@media (min-width: 992px) { .section { padding: 7rem 5%; } }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-button);
+  font-weight: 500;
+  font-size: var(--text-regular);
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease, transform 120ms ease;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--pelorous); color: var(--neutral-darkest); border-color: var(--pelorous); }
+.btn-primary:hover { background: var(--tan); border-color: var(--tan); }
+.btn-secondary { background: transparent; color: inherit; }
+.btn-secondary:hover { background: currentColor; }
+.btn-secondary:hover > span { color: var(--bg, var(--white)); }
+.scheme-1 .btn-secondary:hover, .scheme-4 .btn-secondary:hover { background: var(--neutral-darkest); color: var(--white); }
+.scheme-2 .btn-secondary:hover, .scheme-3 .btn-secondary:hover { background: var(--white); color: var(--neutral-darkest); }
+.btn-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.5rem 0; border: none; background: transparent;
+  font-weight: 500;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+}
+.btn-link:hover { gap: 0.7rem; }
+.btn-sm { padding: 0.55rem 1.1rem; font-size: var(--text-small); }
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--pelorous-darker);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  min-height: 72px;
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 5%;
+  max-width: var(--container); margin: 0 auto;
+  gap: 1.5rem;
+}
+.brand { display: inline-flex; align-items: center; flex-shrink: 0; }
+.brand img { height: 44px; width: auto; display: block; }
+.header .brand img { filter: brightness(0) invert(1); }
+
+.nav { display: none; gap: 0.25rem; align-items: center; }
+.nav a {
+  position: relative;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  transition: color 150ms ease;
+}
+.nav a:hover, .nav a.active { color: var(--white); }
+.nav a.active::after {
+  content: ""; position: absolute; left: 0.9rem; right: 0.9rem; bottom: 0.35rem;
+  height: 2px; background: var(--pelorous);
+}
+.header-cta { display: none; gap: 0.5rem; align-items: center; }
+@media (min-width: 992px) {
+  .nav { display: flex; }
+  .header-cta { display: flex; }
+}
+
+.menu-btn {
+  display: inline-flex; flex-direction: column; gap: 5px;
+  width: 40px; height: 40px; align-items: center; justify-content: center;
+  background: transparent; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px;
+}
+.menu-btn span { display: block; width: 18px; height: 2px; background: var(--white); transition: transform 200ms ease, opacity 200ms ease; }
+.menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-btn.open span:nth-child(2) { opacity: 0; }
+.menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (min-width: 992px) { .menu-btn { display: none; } }
+
+.mobile-nav {
+  display: none;
+  position: absolute; left: 0; right: 0; top: 100%;
+  background: var(--pelorous-darker);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 1rem 5% 1.5rem;
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a { display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1rem; }
+.mobile-nav .row { display: flex; gap: 0.75rem; margin-top: 1rem; }
+@media (min-width: 992px) { .mobile-nav { display: none !important; } }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 4rem 5%;
+  color: var(--white);
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0; z-index: -2;
+}
+.hero-grid img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(22,57,59,0.55) 0%, rgba(22,57,59,0.7) 60%, rgba(22,57,59,0.8) 100%);
+}
+.hero-inner { max-width: 740px; text-align: center; position: relative; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 5.25rem); margin-bottom: 1.25rem; }
+.hero .script { font-family: "Fraunces", serif; font-style: italic; font-weight: 500; color: var(--tan-light); }
+.hero p { font-size: var(--text-medium); margin: 0 auto 2rem; max-width: 560px; opacity: 0.92; }
+.hero-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--pelorous); }
+
+/* ---------- Section heads ---------- */
+.section-head { max-width: 640px; margin: 0 auto 3rem; text-align: center; }
+.section-head .eyebrow { display: block; margin-bottom: 0.75rem; color: inherit; opacity: 0.85; }
+.section-head h2 { margin-bottom: 1rem; }
+.section-head p { font-size: var(--text-medium); opacity: 0.9; }
+@media (min-width: 768px) { .section-head { margin-bottom: 4.5rem; } }
+
+/* ---------- Cards ---------- */
+.card {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+.card:hover { transform: translateY(-4px); }
+.scheme-1 .card:hover, .scheme-4 .card:hover { box-shadow: 0 20px 40px -28px rgba(2,3,4,0.25); }
+
+/* ---------- Features list (scheme 3) ---------- */
+.features-grid {
+  display: grid; grid-template-columns: 1fr; gap: 1.5rem;
+}
+@media (min-width: 992px) { .features-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+.feat-card-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+.feat-card-body .eyebrow { margin-bottom: 0.5rem; font-size: var(--text-regular); }
+.feat-card-body h3 { font-size: var(--text-h4); margin-bottom: 0.75rem; line-height: 1.2; }
+.feat-card-body p { opacity: 0.9; margin-bottom: 1.25rem; flex: 1; }
+.feat-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+/* ---------- Feature (split) ---------- */
+.split {
+  display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;
+}
+@media (min-width: 768px) { .split { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+@media (min-width: 992px) { .split { gap: 5rem; } }
+.split img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-image); }
+.split h2 { margin-bottom: 1.25rem; }
+.split p.lead { font-size: var(--text-medium); margin-bottom: 1.25rem; opacity: 0.9; }
+.split ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.split li {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.split li:last-child { border-bottom: none; }
+.split li::before {
+  content: ""; flex-shrink: 0;
+  width: 18px; height: 18px; margin-top: 0.3rem;
+  border-radius: 50%;
+  background: var(--pelorous);
+  position: relative;
+}
+.split-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 1.5rem; }
+
+/* ---------- Benefits 4-up ---------- */
+.benefits-grid {
+  display: grid; grid-template-columns: 1fr; gap: 2rem;
+}
+@media (min-width: 640px) { .benefits-grid { grid-template-columns: 1fr 1fr; } }
+.benefit-item h3 { font-size: var(--text-h5); margin-bottom: 0.5rem; }
+.benefit-num {
+  display: inline-grid; place-items: center;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--pelorous-lighter);
+  color: var(--pelorous-darker);
+  font-family: "Fraunces", serif; font-size: 1.25rem; font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Stats ---------- */
+.stats-layout {
+  display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;
+}
+@media (min-width: 992px) { .stats-layout { grid-template-columns: 0.5fr 1fr; gap: 5rem; } }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.stat-card { padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius-card); background: var(--white); }
+.stat-card h3 { font-size: var(--text-h6); margin-bottom: 2.5rem; font-family: "Inter", sans-serif; font-weight: 600; letter-spacing: 0; }
+.stat-num { text-align: right; font-family: "Fraunces", serif; font-weight: 500; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; }
+.stat-card hr { border: none; height: 1px; background: var(--border); margin: 1rem 0; }
+.stat-card p { text-align: right; font-size: var(--text-small); opacity: 0.85; }
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+}
+@media (min-width: 992px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+.gallery-grid a {
+  display: block; overflow: hidden; border-radius: var(--radius-image);
+  aspect-ratio: 4/3;
+}
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(.2,.7,.2,1); }
+.gallery-grid a:hover img { transform: scale(1.05); }
+
+/* ---------- Testimonials ---------- */
+.testimonial-grid {
+  display: grid; grid-template-columns: 1fr; gap: 2rem;
+}
+@media (min-width: 768px) { .testimonial-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 992px) { .testimonial-grid { grid-template-columns: repeat(3, 1fr); } }
+.t-card { padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius-card); display: flex; flex-direction: column; }
+.t-stars { display: flex; gap: 0.25rem; color: var(--tan); margin-bottom: 1.25rem; font-size: 1.1rem; letter-spacing: 0.1em; }
+.t-card blockquote { font-family: "Fraunces", serif; font-size: var(--text-medium); margin: 0 0 1.5rem; flex: 1; line-height: 1.45; }
+.t-author { display: flex; align-items: center; gap: 0.85rem; }
+.t-avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--neutral-lightest); }
+.t-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.t-author .name { font-weight: 600; }
+.t-author .role { font-size: var(--text-small); opacity: 0.8; }
+
+/* ---------- FAQ ---------- */
+.faq-list { max-width: 720px; margin: 0 auto; display: grid; gap: 1rem; }
+.faq {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+.faq summary {
+  list-style: none;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  font-size: var(--text-medium); font-weight: 500;
+  cursor: pointer;
+  font-family: "Fraunces", serif;
+  gap: 1rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; font-family: "Inter", sans-serif; font-weight: 400;
+  font-size: 1.8rem; line-height: 1; color: inherit;
+  transition: transform 250ms ease;
+}
+.faq[open] summary::after { transform: rotate(45deg); }
+.faq .answer { padding: 0 1.5rem 1.5rem; opacity: 0.9; line-height: 1.65; }
+
+.faq-cta { margin-top: 3rem; text-align: center; max-width: 520px; margin-left: auto; margin-right: auto; }
+.faq-cta h4 { font-size: var(--text-h4); margin-bottom: 0.75rem; }
+
+/* ---------- CTA Section ---------- */
+.cta-wrap { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+.cta-wrap h2 { margin-bottom: 1rem; }
+.cta-wrap p { font-size: var(--text-medium); opacity: 0.85; margin-bottom: 1.5rem; }
+.cta-image { width: 100%; aspect-ratio: 21/9; object-fit: cover; border-radius: var(--radius-image); }
+
+/* ---------- Footer ---------- */
+.footer { padding: 4rem 5% 2rem; border-top: 1px solid rgba(2,3,4,0.08); background: var(--white); }
+.footer .inner { max-width: var(--container); margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 1fr; gap: 2rem;
+  align-items: center; justify-items: center;
+  padding-bottom: 2.5rem; text-align: center;
+}
+@media (min-width: 992px) {
+  .footer-top { grid-template-columns: auto 1fr auto; text-align: left; justify-items: stretch; }
+}
+.footer-nav { display: flex; gap: 1.5rem 2rem; flex-wrap: wrap; justify-content: center; }
+.footer-nav a { font-weight: 500; font-size: 0.95rem; opacity: 0.85; }
+.footer-nav a:hover { opacity: 1; color: var(--pelorous-darker); }
+.footer-social { display: flex; gap: 0.75rem; justify-self: end; }
+.footer-social a {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid rgba(2,3,4,0.15);
+  display: inline-grid; place-items: center;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+.footer-social a:hover { background: var(--pelorous-darker); color: var(--white); border-color: var(--pelorous-darker); }
+.footer-divider { height: 1px; background: rgba(2,3,4,0.08); }
+.footer-bottom {
+  padding-top: 1.5rem;
+  display: flex; gap: 0.5rem 1.5rem; flex-wrap: wrap;
+  justify-content: center; align-items: center;
+  font-size: 0.85rem; opacity: 0.75;
+}
+.footer-bottom a:hover { text-decoration: underline; }
+
+/* ---------- Scroll-to-top button ---------- */
+.to-top {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--pelorous-darker); color: var(--white);
+  border: none; display: grid; place-items: center;
+  box-shadow: 0 12px 24px -12px rgba(22,57,59,0.6);
+  opacity: 0; transform: translateY(8px); pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.to-top:hover { background: var(--tan-dark); }
+
+/* Form contact mini block under cta */
+.contact-row {
+  display: grid; grid-template-columns: 1fr; gap: 1.5rem;
+  margin-top: 3rem; padding: 2rem;
+  border: 1px solid var(--border); border-radius: var(--radius-card);
+  background: rgba(255,255,255,0.6);
+}
+@media (min-width: 768px) { .contact-row { grid-template-columns: repeat(3,1fr); gap: 1rem 2rem; padding: 2.5rem; } }
+.contact-row .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.7; margin-bottom: 0.35rem; }
+.contact-row .val { font-family: "Fraunces", serif; font-size: 1.25rem; }
+.contact-row a.val:hover { color: var(--pelorous-darker); }
+</style>
+<link rel="stylesheet" href="cinematic.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" data-screen-label="00 Header">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="Culver City Surgical Specialists">
+      <img src="reference/logo/culver-city-logo.png" alt="Culver City Surgical" />
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#benefits" style="text-align: center">Why us</a>
+      <a href="#gallery">Facility</a>
+      <a href="#stories">Stories</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="#faq" class="btn btn-secondary btn-sm"><span>Learn more</span></a>
+      <a href="#contact" class="btn btn-primary btn-sm">Request appointment</a>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#benefits">Why us</a>
+    <a href="#gallery">Facility</a>
+    <a href="#stories">Stories</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <div class="row">
+      <a href="#faq" class="btn btn-secondary btn-sm" style="flex:1"><span>Learn more</span></a>
+      <a href="#contact" class="btn btn-primary btn-sm" style="flex:1">Request</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero scheme-2" id="home" data-screen-label="01 Hero">
+  <div class="hero-grid" aria-hidden="true">
+    <img src="reference/images/hero-building.png" alt="" />
+  </div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow" style="color: rgb(236, 241, 245)">Boutique outpatient surgery — Culver City</span>
+    <h1>Expert care.<br/><span class="script">Personal touch.</span></h1>
+    <p style="color: rgb(225, 233, 239)">A Joint Commission‑accredited, Medicare‑approved ambulatory surgery center where board‑certified surgeons across ten specialties deliver same‑day procedures with concierge attention.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Request appointment</a>
+      <a href="#about" class="btn btn-secondary"><span>Learn more</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE STRIP ============ -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track" data-dup="1">
+    <span style="color: rgb(221, 229, 234)">Orthopedics<span class="dot"></span>Gynecology<span class="dot"></span>ENT<span class="dot"></span>Pain Management<span class="dot"></span>Gastroenterology<span class="dot"></span>Podiatry<span class="dot"></span>General Surgery<span class="dot"></span>Ophthalmology<span class="dot"></span>Urology<span class="dot"></span>Plastic Surgery<span class="dot"></span></span>
+    <span style="color: rgb(240, 244, 247)">Orthopedics<span class="dot"></span>Gynecology<span class="dot"></span>ENT<span class="dot"></span>Pain Management<span class="dot"></span>Gastroenterology<span class="dot"></span>Podiatry<span class="dot"></span>General Surgery<span class="dot"></span>Ophthalmology<span class="dot"></span>Urology<span class="dot"></span>Plastic Surgery<span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ============ ABOUT / FEATURES LIST ============ -->
+<section class="section scheme-3" id="about" data-screen-label="02 About">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Foundation</span>
+      <h2 class="h2">What sets us apart</h2>
+      <p>Three reasons patients choose Culver City Surgical Specialists for their care.</p>
+    </div>
+    <div class="features-grid">
+      <article class="card feat-card">
+        <div class="feat-card-body" style="text-align: center">
+          <span class="eyebrow">Expertise</span>
+          <h3 style="text-align: left">Ten surgical specialties under one roof</h3>
+          <p style="text-align: left">Orthopedics, ENT, gynecology, pain management, GI, podiatry, general surgery, ophthalmology, urology, and plastic surgery.</p>
+          <a href="#services" class="btn-link">Explore <span aria-hidden="true">→</span></a>
+        </div>
+        <img src="reference/images/feat-0.png" alt="Surgeon at work" />
+      </article>
+      <article class="card feat-card">
+        <div class="feat-card-body">
+          <span class="eyebrow">Access</span>
+          <h3>Your surgeon, not a middleman</h3>
+          <p>Direct communication with the person performing your procedure, from first call through full recovery.</p>
+          <a href="#benefits" class="btn-link">Explore <span aria-hidden="true">→</span></a>
+        </div>
+        <img src="reference/images/feat-1.png" alt="Consultation" />
+      </article>
+      <article class="card feat-card">
+        <div class="feat-card-body" style="text-align: left">
+          <span class="eyebrow">Standards</span>
+          <h3>Joint Commission accredited, Medicare approved</h3>
+          <p>The highest level of accreditation for ambulatory surgery centers, backed by rigorous safety protocols and modern equipment.</p>
+          <a href="#gallery" class="btn-link">Explore <span aria-hidden="true">→</span></a>
+        </div>
+        <img src="reference/images/feat-2.png" alt="Operating room" />
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES / SPECIALTIES ============ -->
+<style>
+.spec-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) { .spec-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 992px) { .spec-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
+.spec-card { border: 1px solid var(--border); border-radius: var(--radius-card); padding: 1.5rem 1.5rem 1.25rem; background: var(--white); display: flex; flex-direction: column; transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease; }
+.spec-card:hover { transform: translateY(-3px); border-color: var(--pelorous); box-shadow: 0 18px 36px -28px rgba(2,3,4,0.25); }
+.spec-card h3 { font-size: var(--text-h6); margin-bottom: 0.75rem; line-height: 1.25; }
+.spec-num { font-family: "Fraunces", serif; font-size: 0.85rem; opacity: 0.5; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.spec-card ul { list-style: none; padding: 0; margin: 0; }
+.spec-card li { padding: 0.35rem 0; font-size: 0.95rem; opacity: 0.85; border-top: 1px solid rgba(2,3,4,0.06); }
+.spec-card li:first-child { border-top: none; }
+.spec-card li.proc { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; cursor: pointer; padding-left: 0; padding-right: 0; transition: color 160ms ease, padding 160ms ease; }
+.spec-card li.proc .proc-chev { font-size: 1.1rem; opacity: 0; transform: translateX(-4px); transition: opacity 160ms ease, transform 160ms ease, color 160ms ease; color: var(--pelorous); }
+.spec-card li.proc:hover { color: var(--pelorous-darker); }
+.spec-card li.proc:hover .proc-chev,
+.spec-card li.proc:focus-visible .proc-chev { opacity: 1; transform: translateX(0); }
+.spec-card li.proc:focus-visible { outline: 2px solid var(--pelorous); outline-offset: 2px; border-radius: 4px; }
+.spec-card[style*="text-align"] li.proc { text-align: left; }
+
+/* Modal */
+.proc-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 1.5rem; }
+.proc-modal[data-open="true"] { display: flex; }
+.proc-modal::before { content: ""; position: absolute; inset: 0; background: rgba(2,3,4,0.55); backdrop-filter: blur(4px); animation: pmFade 200ms ease; }
+.proc-dialog { position: relative; background: var(--white); border-radius: var(--radius-card); max-width: 560px; width: 100%; padding: 2.25rem 2.25rem 1.75rem; box-shadow: 0 40px 80px -20px rgba(2,3,4,0.4); animation: pmRise 260ms cubic-bezier(.2,.7,.2,1); max-height: 90vh; overflow-y: auto; }
+@keyframes pmFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pmRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.proc-dialog .pm-eyebrow { font-family: "Fraunces", serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pelorous-darker); margin-bottom: 0.5rem; }
+.proc-dialog h3 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1rem; }
+.proc-dialog .pm-body { font-size: 1rem; line-height: 1.6; color: rgba(2,3,4,0.78); white-space: pre-wrap; min-height: 4.5rem; }
+.proc-dialog textarea { width: 100%; min-height: 12rem; font: inherit; font-size: 1rem; line-height: 1.6; padding: 0.85rem 1rem; border: 1px solid var(--border); border-radius: 10px; resize: vertical; background: rgba(0,0,0,0.02); color: inherit; font-family: inherit; }
+.proc-dialog textarea:focus { outline: none; border-color: var(--pelorous); box-shadow: 0 0 0 3px rgba(0,141,160,0.15); }
+.proc-dialog .pm-meta { font-size: 0.78rem; opacity: 0.55; margin-top: 0.75rem; font-family: "Fraunces", serif; letter-spacing: 0.08em; }
+.proc-dialog .pm-actions { display: flex; gap: 0.75rem; align-items: center; justify-content: flex-end; margin-top: 1.5rem; flex-wrap: wrap; }
+.proc-dialog .pm-actions .left { margin-right: auto; }
+.proc-dialog .btn-ghost { background: transparent; border: none; padding: 0.6rem 0.9rem; font: inherit; font-size: 0.9rem; cursor: pointer; color: rgba(2,3,4,0.6); border-radius: 6px; }
+.proc-dialog .btn-ghost:hover { color: var(--ink); background: rgba(0,0,0,0.04); }
+.proc-dialog .btn-ghost.danger:hover { color: #b3261e; background: rgba(179,38,30,0.08); }
+.proc-dialog .pm-close { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(0,0,0,0.04); cursor: pointer; font-size: 1.2rem; line-height: 1; color: rgba(2,3,4,0.6); display: flex; align-items: center; justify-content: center; }
+.proc-dialog .pm-close:hover { background: rgba(0,0,0,0.08); color: var(--ink); }
+.pm-edit-toast { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--white); padding: 0.7rem 1.25rem; border-radius: 999px; font-size: 0.85rem; z-index: 1100; opacity: 0; pointer-events: none; transition: opacity 200ms ease, transform 200ms ease; }
+.pm-edit-toast[data-show="true"] { opacity: 1; transform: translateX(-50%) translateY(-4px); }
+
+</style>
+<section class="section scheme-1" id="services" data-screen-label="03 Services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color: var(--pelorous-darker)">Services</span>
+      <h2 class="h2">Ten Specialties, 
+One Center</h2>
+      <p>A full range of outpatient surgical procedures performed by board‑certified specialists.</p>
+    </div>
+    <div class="spec-grid" style="text-align: center">
+      <div class="spec-card">
+        <div class="spec-num">01</div>
+        <h3>Orthopedic Surgery</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Shoulder">Shoulder<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Elbow">Elbow<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hand">Hand<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Wrist (Carpal Tunnel Release)">Wrist (Carpal Tunnel Release)<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Knee">Knee<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Arthroscopy">Arthroscopy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Microdiscectomy">Microdiscectomy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Fusions">Fusions<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">02</div>
+        <h3>Gynecology</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Stress Urinary Incontinence">Stress Urinary Incontinence<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Endometriosis Resection">Endometriosis Resection<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Anterior Vaginal Wall Repair">Anterior Vaginal Wall Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Myomectomy Procedures">Myomectomy Procedures<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Posterior Wall Repair">Posterior Wall Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Uterine Ablation">Uterine Ablation<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">03</div>
+        <h3>Ear, Nose &amp; Throat</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Balloon Sinuplasty">Balloon Sinuplasty<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Rhinoplasty">Rhinoplasty<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Septoplasty">Septoplasty<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">04</div>
+        <h3>Pain Management</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Minimally‑Invasive Pain Relief">Minimally‑Invasive Pain Relief<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Rhizotomy">Rhizotomy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Epidural Injection">Epidural Injection<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">05</div>
+        <h3>Gastroenterology (GI)</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Colonoscopy">Colonoscopy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="EGD">EGD<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">06</div>
+        <h3>Foot &amp; Ankle — Podiatry</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Ankle Fracture">Ankle Fracture<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Bunionectomy">Bunionectomy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hammer Toe Treatment">Hammer Toe Treatment<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Plantar Fasciitis Procedures">Plantar Fasciitis Procedures<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">07</div>
+        <h3>General Surgery</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Bariatric Surgery">Bariatric Surgery<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hernia Repair">Hernia Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hemorrhoid Repair">Hemorrhoid Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Gallbladder Repair (Cholecystectomy)">Gallbladder Repair (Cholecystectomy)<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">08</div>
+        <h3>Ophthalmology</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Blepharoplasty (Upper & Lower Eyelids)">Blepharoplasty (Upper &amp; Lower Eyelids)<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">09</div>
+        <h3>Urology</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Urologic procedures">Urologic procedures<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+      <div class="spec-card">
+        <div class="spec-num">10</div>
+        <h3>Plastic Surgery</h3>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Facelift">Facelift<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Breast Implants, Lifts & Augmentation">Breast Implants, Lifts &amp; Augmentation<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Tummy Tuck">Tummy Tuck<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Liposuction">Liposuction<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 3rem;">
+      <a href="#contact" class="btn btn-primary">Request appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section scheme-1" id="benefits" data-screen-label="04 Benefits" style="padding-top: 0">
+  <div class="container">
+    <div class="split">
+      <img src="reference/images/benefits.png" alt="Recovery space" />
+      <div>
+        <span class="eyebrow" style="color: var(--pelorous-darker)">The concierge difference</span>
+        <h2 class="h2" style="margin: 0.75rem 0 2rem">Care designed around you</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-num">01</div>
+            <h3>Your surgeon decides</h3>
+            <p>Direct access means you speak with the person holding the scalpel — not an intermediary.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-num">02</div>
+            <h3>Recovery on your terms</h3>
+            <p>Heal at home with a plan written specifically for your body and your schedule.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-num">03</div>
+            <h3>No hospital bureaucracy</h3>
+            <p>Minimal wait times and same-day procedures in a calm, focused setting.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-num">04</div>
+            <h3>Answers when you need them</h3>
+            <p>Modern facility with attentive surgical staff who know you by name.</p>
+          </div>
+        </div>
+        <div class="split-actions">
+          <a href="#contact" class="btn btn-primary">Schedule now</a>
+          <a href="#stories" class="btn-link">Read patient stories <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section scheme-4" id="stats" data-screen-label="05 Stats">
+  <div class="container">
+    <div class="stats-layout">
+      <div>
+        <span class="eyebrow">By the numbers</span>
+        <h2 class="h2" style="margin: 1rem 0 1.25rem">Proven results and patient trust</h2>
+        <p class="t-medium" style="opacity: 0.85">Our track record reflects our commitment to excellence and personalized care in every procedure we perform.</p>
+        <div class="split-actions">
+          <a href="#about" class="btn btn-secondary"><span>Learn more</span></a>
+          <a href="#services" class="btn-link">Explore services <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3 style="text-align: center">Successful procedures</h3>
+          <p class="stat-num" style="text-align: center"><span data-count="1000" data-suffix="+">0+</span></p>
+          <hr/>
+          <p style="text-align: center">Surgeries performed with exceptional outcomes</p>
+        </div>
+        <div class="stat-card">
+          <h3 style="text-align: center">Patient satisfaction</h3>
+          <p class="stat-num" style="text-align: center"><span data-count="98" data-suffix="%">0%</span></p>
+          <hr/>
+          <p style="text-align: center">Patients report high satisfaction with care and results</p>
+        </div>
+        <div class="stat-card">
+          <h3 style="text-align: center">Average recovery</h3>
+          <p class="stat-num" style="text-align: center"><span data-count="2" data-suffix=" wks">0 wks</span></p>
+          <hr/>
+          <p style="text-align: center">Most patients return to normal activities quickly</p>
+        </div>
+        <div class="stat-card">
+          <h3 style="text-align: center">Years accredited</h3>
+          <p class="stat-num" style="text-align: center"><span data-count="15" data-suffix="+">0+</span></p>
+          <hr/>
+          <p style="text-align: center">Maintaining rigorous standards and surgical excellence</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section scheme-1" id="gallery" data-screen-label="06 Gallery">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Our facility</h2>
+      <p>Modern suites designed for your comfort and confidence.</p>
+    </div>
+    <div class="gallery-grid">
+      <a href="#"><img src="reference/images/gallery-0.png" alt="Recovery lounge" /></a>
+      <a href="#"><img src="reference/images/gallery-1.png" alt="Operating suite" /></a>
+      <a href="#"><img src="reference/images/gallery-2.jpg" alt="Reception" /></a>
+      <a href="#"><img src="reference/images/gallery-3.png" alt="Pre-op room" /></a>
+      <a href="#"><img src="reference/images/gallery-4.png" alt="Imaging" /></a>
+      <a href="#"><img src="reference/images/gallery-5.png" alt="Consult room" /></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section scheme-1" id="stories" data-screen-label="07 Stories" style="padding-top: 0">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Patient stories</h2>
+      <p>Real outcomes from those who trusted us with their care.</p>
+    </div>
+    <div class="testimonial-grid">
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"I was back to running within three weeks. The direct access to my surgeon made all the difference."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar"><img src="reference/images/testim-0.jpg" alt="" /></div>
+          <div>
+            <div class="name">Michael Torres</div>
+            <div class="role">Orthopedic patient</div>
+          </div>
+        </div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"The personalized attention here isn't what you find at a hospital. They knew my name, my concerns, my goals."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar"><img src="reference/images/testim-1.jpg" alt="" /></div>
+          <div>
+            <div class="name">Sarah Chen</div>
+            <div class="role">General surgery patient</div>
+          </div>
+        </div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Recovery at home with a plan I understood completely. That made the healing process feel manageable and real."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar"><img src="reference/images/testim-2.jpg" alt="" /></div>
+          <div>
+            <div class="name">James Whitmore</div>
+            <div class="role">Pain management patient</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section scheme-3" id="faq" data-screen-label="08 FAQ">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">Questions</h2>
+      <p>Everything you need to know about your procedure and recovery.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq">
+        <summary>What happens on surgery day?</summary>
+        <div class="answer">You'll arrive at our Culver City facility where our team walks you through each step. Your surgeon meets with you before the procedure, and our anesthesia team ensures your comfort throughout. Most patients go home the same day with detailed recovery instructions.</div>
+      </details>
+      <details class="faq">
+        <summary>Does insurance cover procedures here?</summary>
+        <div class="answer">We work with most major insurance plans. Our staff verifies your coverage before your consultation so there are no surprises. We also discuss financing options if needed.</div>
+      </details>
+      <details class="faq">
+        <summary>How long is typical recovery?</summary>
+        <div class="answer">Recovery varies by procedure and individual healing, but most patients return to normal activities within two to four weeks. Your surgeon creates a personalized timeline based on your specific situation.</div>
+      </details>
+      <details class="faq">
+        <summary>Can I contact my surgeon after surgery?</summary>
+        <div class="answer">Yes. Direct access to your surgical team is part of our concierge approach. You have a clear line of communication for questions or concerns during your recovery.</div>
+      </details>
+      <details class="faq">
+        <summary>What makes outpatient surgery safer?</summary>
+        <div class="answer">Our fully accredited facility maintains rigorous safety protocols and modern equipment. Outpatient procedures often mean fewer complications because you recover in a familiar environment with a personalized plan.</div>
+      </details>
+    </div>
+    <div class="faq-cta">
+      <h4>Ready to move forward?</h4>
+      <p class="t-medium" style="opacity: 0.9; margin-bottom: 1.5rem">Get answers to your specific questions from our team.</p>
+      <a href="#contact" class="btn btn-secondary"><span>Contact us</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / CONTACT ============ -->
+<section class="section scheme-1" id="contact" data-screen-label="09 Contact">
+  <div class="container">
+    <div class="cta-wrap">
+      <h2 class="h2">Schedule your consultation today</h2>
+      <p>Work directly with your surgeon from the first conversation.</p>
+      <div class="split-actions" style="justify-content: center">
+        <a href="#" class="btn btn-primary" id="requestBtn">Request appointment</a>
+        <a href="#faq" class="btn btn-secondary"><span>Learn more</span></a>
+      </div>
+    </div>
+    <img class="cta-image" src="reference/images/cta.png" alt="Culver City Surgical Specialists facility" />
+
+    <div class="contact-row" style="text-align: center">
+      <div>
+        <div class="label">Location</div>
+        <div class="val">3831 Hughes Ave, Suite 702<br/>Culver City, CA 90232</div>
+      </div>
+      <div>
+        <div class="label">Phone</div>
+        <a class="val" href="tel:+13108373834">310‑837‑3834</a>
+        <div class="t-small" style="margin-top:0.5rem; opacity: 0.7">Fax: 310‑837‑3015</div>
+      </div>
+      <div>
+        <div class="label">Hours</div>
+        <div class="val">Mon – Fri<br/>7 AM – 6 PM</div>
+        <div class="t-small" style="margin-top:0.5rem; opacity: 0.7">Closed Saturday &amp; Sunday</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer scheme-1" data-screen-label="10 Footer">
+  <div class="inner">
+    <div class="footer-top">
+      <a href="#top" class="brand">
+        <img src="reference/logo/culver-city-logo.png" alt="Culver City Surgical" style="height: 52px;" />
+      </a>
+      <ul class="footer-nav" aria-label="Footer">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#benefits">Why us</a></li>
+        <li><a href="#gallery">Facility</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="footer-social" aria-label="Social">
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1v-2c0-.9.2-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.3H7.7V14h2.7v8h3.1z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.659l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.48 3.04 5.48 7v7.46H17.4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H8.1V8z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.5 12 4.5 12 4.5s-7 0-8.9.6A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.6 8.9.6 8.9.6s7 0 8.9-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.5 12 31 31 0 0 0 23 7.2zM9.75 15.5v-7l6 3.5-6 3.5z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© 2026 Culver City Surgical Specialists. All rights reserved.</p>
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms of service</a>
+      <a href="#">Cookie settings</a>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    menuBtn.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  // Close mobile nav on link click
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Smooth scrolling with offset is handled by CSS scroll-padding-top.
+  // Active nav link based on scroll position
+  const navLinks = document.querySelectorAll('.nav a');
+  const sections = ['about','services','benefits','gallery','stories','faq','contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  function setActive() {
+    const y = window.scrollY + 120;
+    let current = sections[0];
+    for (const s of sections) {
+      if (s.offsetTop <= y) current = s;
+    }
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + (current?.id || ''));
+    });
+    // to-top visibility
+    document.getElementById('toTop').classList.toggle('visible', window.scrollY > 600);
+  }
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+
+  document.getElementById('toTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Request button feedback
+  const reqBtn = document.getElementById('requestBtn');
+  if (reqBtn) {
+    reqBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const orig = reqBtn.textContent;
+      reqBtn.textContent = 'Thanks — we\u2019ll be in touch';
+      reqBtn.style.background = 'var(--tan)';
+      reqBtn.style.borderColor = 'var(--tan)';
+      setTimeout(() => {
+        reqBtn.textContent = orig;
+        reqBtn.style.background = '';
+        reqBtn.style.borderColor = '';
+      }, 2400);
+    });
+  }
+</script>
+
+<!-- ============ PROCEDURE MODAL ============ -->
+<div class="proc-modal" id="procModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle" data-open="false">
+  <div class="proc-dialog">
+    <button class="pm-close" type="button" aria-label="Close" data-pm-close>✕</button>
+    <div class="pm-eyebrow" id="pmCategory">Procedure</div>
+    <h3 id="pmTitle">—</h3>
+    <div class="pm-body" id="pmBody"></div>
+    <textarea id="pmEditor" hidden placeholder="Describe this procedure…"></textarea>
+    <div class="pm-meta" id="pmMeta"></div>
+    <div class="pm-actions">
+      <button type="button" class="btn-ghost danger left" id="pmReset" hidden>Reset to default</button>
+      <button type="button" class="btn-ghost" id="pmCancel" hidden>Cancel</button>
+      <button type="button" class="btn btn-secondary" id="pmEdit"><span>Edit description</span></button>
+      <button type="button" class="btn btn-primary" id="pmSave" hidden>Save</button>
+    </div>
+  </div>
+</div>
+<div class="pm-edit-toast" id="pmToast" data-show="false">Saved</div>
+
+<script>
+(function () {
+  // Toggle to disable description editing in deployed/standalone builds.
+  // The standalone bundling step rewrites this to `false` automatically.
+  const EDIT_ENABLED = true; /* EDIT_ENABLED_FLAG */
+
+  const DEFAULT_DESCRIPTIONS = {
+    "Shoulder": "Arthroscopic and open shoulder procedures address rotator cuff tears, labral injuries, impingement, and instability. Small incisions and a fiber‑optic camera allow precise repair with faster recovery than traditional open surgery.",
+    "Elbow": "Treatment for tennis elbow, ulnar nerve compression, fractures, and stiffness. Many elbow conditions are addressed arthroscopically through tiny incisions, returning strength and range of motion.",
+    "Hand": "Procedures for trigger finger, Dupuytren's contracture, ganglion cysts, and arthritis. Most are performed in under an hour with local or regional anesthesia.",
+    "Wrist (Carpal Tunnel Release)": "Carpal tunnel release relieves pressure on the median nerve, eliminating numbness, tingling, and pain in the hand. The procedure takes about 15 minutes and most patients are back to light activity within days.",
+    "Knee": "Comprehensive knee surgery including meniscus repair, ligament reconstruction (ACL/MCL), cartilage restoration, and partial replacement. Arthroscopic techniques minimize tissue damage and accelerate return to activity.",
+    "Arthroscopy": "Minimally invasive surgery using a pencil‑thin camera through a small incision. Used to diagnose and treat joint problems in the knee, shoulder, hip, ankle, elbow, and wrist with minimal scarring.",
+    "Microdiscectomy": "Removal of herniated disc material that is pressing on a spinal nerve. The microscope‑assisted approach preserves surrounding tissue and most patients walk the same day.",
+    "Fusions": "Spinal fusion joins two or more vertebrae to eliminate painful motion and stabilize the spine. Used for severe disc disease, deformity, or instability when conservative treatments have failed.",
+
+    "Stress Urinary Incontinence": "Minimally invasive sling procedures support the urethra to prevent leakage during coughing, sneezing, or activity. Same‑day surgery with a return to normal life in a few weeks.",
+    "Endometriosis Resection": "Laparoscopic excision of endometrial tissue growing outside the uterus. Removing the disease at its source often relieves pelvic pain and improves fertility.",
+    "Anterior Vaginal Wall Repair": "Repair of a cystocele (dropped bladder) to restore pelvic support and relieve pressure, urinary symptoms, or discomfort. Typically performed vaginally without external incisions.",
+    "Myomectomy Procedures": "Surgical removal of uterine fibroids while preserving the uterus. Offered laparoscopically, hysteroscopically, or via mini‑incision depending on fibroid size and location.",
+    "Posterior Wall Repair": "Repair of a rectocele to restore the back wall of the vagina, relieving pressure, discomfort, and bowel symptoms.",
+    "Uterine Ablation": "Minimally invasive treatment that removes the uterine lining to reduce or stop heavy menstrual bleeding. Takes less than 10 minutes with rapid recovery.",
+
+    "Balloon Sinuplasty": "An in‑office alternative to traditional sinus surgery. A small balloon is gently inflated to open blocked sinus passages without cutting or removing tissue.",
+    "Rhinoplasty": "Reshaping of the nose for cosmetic or functional reasons. Can be combined with septoplasty to improve both appearance and breathing.",
+    "Septoplasty": "Straightening of a deviated septum to restore proper airflow through the nose. Relieves chronic congestion, snoring, and recurrent sinus infections.",
+
+    "Minimally‑Invasive Pain Relief": "Targeted injections, nerve blocks, and ablation procedures performed under image guidance to relieve chronic back, neck, and joint pain without major surgery.",
+    "Rhizotomy": "Radiofrequency ablation of small nerves that transmit pain from arthritic facet joints in the spine. Provides 6–18 months of relief and can be repeated.",
+    "Epidural Injection": "Anti‑inflammatory medication delivered directly to the epidural space around irritated spinal nerves. Relieves pain from herniated discs, sciatica, and spinal stenosis.",
+
+    "Colonoscopy": "Examination of the entire colon using a flexible scope. Used for cancer screening, evaluating bleeding or pain, and removing polyps before they become cancerous.",
+    "EGD": "Upper endoscopy that examines the esophagus, stomach, and upper small intestine. Diagnoses reflux, ulcers, swallowing problems, and bleeding.",
+
+    "Ankle Fracture": "Surgical fixation of broken ankle bones using plates, screws, or pins to restore alignment, stability, and proper healing.",
+    "Bunionectomy": "Correction of a bunion deformity by realigning the bone at the base of the big toe. Modern techniques allow weight‑bearing in supportive footwear soon after surgery.",
+    "Hammer Toe Treatment": "Straightening of a bent toe joint through tendon release or bone realignment. Restores comfortable shoe wear and eliminates painful corns.",
+    "Plantar Fasciitis Procedures": "Endoscopic plantar fascia release for chronic heel pain that has not responded to conservative care. Outpatient procedure with a return to walking within days.",
+
+    "Bariatric Surgery": "Weight‑loss procedures including gastric sleeve and bypass for patients with obesity. Reduces stomach capacity and rebalances hunger hormones for sustained weight loss.",
+    "Hernia Repair": "Repair of inguinal, umbilical, hiatal, or incisional hernias with mesh reinforcement. Most are performed laparoscopically for a faster, less painful recovery.",
+    "Hemorrhoid Repair": "Removal or banding of symptomatic hemorrhoids that cause bleeding, pain, or prolapse. Same‑day procedure with most patients returning to work within a week.",
+    "Gallbladder Repair (Cholecystectomy)": "Laparoscopic removal of the gallbladder for gallstones, infection, or biliary dyskinesia. Four small incisions, same‑day discharge, and a return to normal diet within days.",
+
+    "Blepharoplasty (Upper & Lower Eyelids)": "Cosmetic and functional eyelid surgery that removes excess skin and fat to restore a rested, youthful appearance and improve vision when sagging skin obstructs the upper visual field.",
+
+    "Urologic procedures": "Outpatient urologic surgery including cystoscopy, stone removal, vasectomy, and minor procedures of the bladder, prostate, and urinary tract.",
+
+    "Facelift": "Surgical lifting and tightening of facial tissue to reduce sagging, deep folds, and jowls. Customized techniques range from mini‑lift to deep‑plane for natural, long‑lasting results.",
+    "Breast Implants, Lifts & Augmentation": "Breast surgery including augmentation with implants, mastopexy (lift), and combination procedures to restore or enhance shape, fullness, and symmetry.",
+    "Tummy Tuck": "Abdominoplasty removes excess skin and fat while tightening abdominal muscles. Often performed after pregnancy or significant weight loss.",
+    "Liposuction": "Targeted removal of stubborn fat deposits to contour the body. Multiple areas can be treated in a single session with smooth, natural‑looking results."
+  };
+
+  const CATEGORY_FOR = {};
+  document.querySelectorAll('.spec-card').forEach(card => {
+    const cat = card.querySelector('h3')?.textContent?.trim() || '';
+    card.querySelectorAll('li.proc').forEach(li => {
+      CATEGORY_FOR[li.dataset.proc] = cat;
+    });
+  });
+
+  const STORAGE_KEY = 'ccss_procedure_descriptions_v1';
+  function loadOverrides() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
+  }
+  function saveOverrides(map) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+  }
+
+  const modal = document.getElementById('procModal');
+  const titleEl = document.getElementById('pmTitle');
+  const catEl = document.getElementById('pmCategory');
+  const bodyEl = document.getElementById('pmBody');
+  const metaEl = document.getElementById('pmMeta');
+  const editor = document.getElementById('pmEditor');
+  const editBtn = document.getElementById('pmEdit');
+  const saveBtn = document.getElementById('pmSave');
+  const cancelBtn = document.getElementById('pmCancel');
+  const resetBtn = document.getElementById('pmReset');
+  const toast = document.getElementById('pmToast');
+  let activeProc = null;
+
+  function descFor(name) {
+    const overrides = loadOverrides();
+    if (overrides[name] !== undefined) return { text: overrides[name], custom: true };
+    return { text: DEFAULT_DESCRIPTIONS[name] || '', custom: false };
+  }
+
+  function render() {
+    const { text, custom } = descFor(activeProc);
+    titleEl.textContent = activeProc;
+    catEl.textContent = CATEGORY_FOR[activeProc] || 'Procedure';
+    bodyEl.textContent = text || (EDIT_ENABLED ? 'No description yet. Click "Edit description" to add one.' : 'Description coming soon.');
+    bodyEl.style.opacity = text ? '' : '0.5';
+    metaEl.textContent = custom ? 'Custom description · saved locally' : (text ? '' : '');
+    setEditing(false);
+  }
+
+  function setEditing(on) {
+    editor.hidden = !on;
+    bodyEl.hidden = on;
+    metaEl.hidden = on;
+    editBtn.hidden = on || !EDIT_ENABLED;
+    saveBtn.hidden = !on;
+    cancelBtn.hidden = !on;
+    const { custom } = descFor(activeProc);
+    resetBtn.hidden = !(on && custom);
+    if (on) {
+      editor.value = descFor(activeProc).text || '';
+      setTimeout(() => editor.focus(), 0);
+    }
+  }
+
+  function openModal(proc) {
+    activeProc = proc;
+    modal.dataset.open = 'true';
+    document.body.style.overflow = 'hidden';
+    render();
+  }
+  function closeModal() {
+    modal.dataset.open = 'false';
+    document.body.style.overflow = '';
+    activeProc = null;
+  }
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.dataset.show = 'true';
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => { toast.dataset.show = 'false'; }, 1600);
+  }
+
+  document.addEventListener('click', e => {
+    const li = e.target.closest('.spec-card li.proc');
+    if (li) { openModal(li.dataset.proc); return; }
+    if (e.target.matches('[data-pm-close]') || e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', e => {
+    if (modal.dataset.open !== 'true') return;
+    if (e.key === 'Escape') closeModal();
+  });
+  document.querySelectorAll('.spec-card li.proc').forEach(li => {
+    li.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(li.dataset.proc); }
+    });
+  });
+
+  editBtn.addEventListener('click', () => { if (EDIT_ENABLED) setEditing(true); });
+  cancelBtn.addEventListener('click', () => setEditing(false));
+  saveBtn.addEventListener('click', () => {
+    const overrides = loadOverrides();
+    overrides[activeProc] = editor.value.trim();
+    saveOverrides(overrides);
+    showToast('Saved');
+    render();
+  });
+  resetBtn.addEventListener('click', () => {
+    const overrides = loadOverrides();
+    delete overrides[activeProc];
+    saveOverrides(overrides);
+    showToast('Reset to default');
+    render();
+  });
+})();
+</script>
+
+<!-- ============ TWEAKS DEFAULTS + SCRIPTS ============ -->
+<script>
+window.__TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "midnight",
+  "spotlight": true,
+  "grain": false,
+  "reveals": true,
+  "revealStyle": "lift",
+  "magnetic": true,
+  "cardHover": "glow",
+  "parallax": 0.71,
+  "speed": 1.3,
+  "marquee": true,
+  "ambience": "none"
+}/*EDITMODE-END*/;
+</script>
+<script src="cinematic.js"></script>
+<script src="tweaks.js"></script>
+</body>
+</html>
