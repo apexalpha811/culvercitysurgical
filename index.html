@@ -204,12 +204,16 @@ button { font: inherit; cursor: pointer; }
   display: none;
   position: absolute; left: 0; right: 0; top: 100%;
   background: var(--pelorous-darker);
+  color: #ffffff;
   border-top: 1px solid rgba(255,255,255,0.12);
   padding: 1rem 5% 1.5rem;
 }
 .mobile-nav.open { display: block; }
-.mobile-nav a { display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1rem; }
+.mobile-nav a { display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1rem; color: #ffffff; }
 .mobile-nav .row { display: flex; gap: 0.75rem; margin-top: 1rem; }
+.mobile-nav .row a { border-bottom: none; }
+.mobile-nav .btn-secondary { color: #ffffff; border-color: rgba(255,255,255,0.45); }
+.mobile-nav .btn-secondary span { color: #ffffff; }
 @media (min-width: 992px) { .mobile-nav { display: none !important; } }
 
 /* ---------- Hero ---------- */
