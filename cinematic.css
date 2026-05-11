@@ -261,6 +261,7 @@ html[data-magnetic="off"] .btn { transform: none !important; }
 
 html[data-theme="midnight"] {
   --white: #0e1418;
+  --accent-text: #65d9e1;
   --neutral-darkest: #f5f6f7;
   --neutral-darker: #d4d8db;
   --neutral-dark: #9aa1a6;

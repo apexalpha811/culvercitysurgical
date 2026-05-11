@@ -22,6 +22,7 @@
 /* ---------- Tokens ---------- */
 :root {
   --white: #ffffff;
+  --accent-text: var(--pelorous-darker);
   --neutral-lightest: #f2f2f2;
   --neutral-lighter: #d9d9d9;
   --neutral-light: #b3b3b3;
@@ -402,7 +403,7 @@ button { font: inherit; cursor: pointer; }
 }
 .footer-nav { display: flex; gap: 1.5rem 2rem; flex-wrap: wrap; justify-content: center; }
 .footer-nav a { font-weight: 500; font-size: 0.95rem; opacity: 0.85; }
-.footer-nav a:hover { opacity: 1; color: var(--pelorous-darker); }
+.footer-nav a:hover { opacity: 1; color: var(--accent-text); }
 .footer-social { display: flex; gap: 0.75rem; justify-self: end; }
 .footer-social a {
   width: 36px; height: 36px; border-radius: 50%;
@@ -443,7 +444,7 @@ button { font: inherit; cursor: pointer; }
 @media (min-width: 768px) { .contact-row { grid-template-columns: repeat(3,1fr); gap: 1rem 2rem; padding: 2.5rem; } }
 .contact-row .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.7; margin-bottom: 0.35rem; }
 .contact-row .val { font-family: "Fraunces", serif; font-size: 1.25rem; }
-.contact-row a.val:hover { color: var(--pelorous-darker); }
+.contact-row a.val:hover { color: var(--accent-text); }
 </style>
 <link rel="stylesheet" href="cinematic.css" />
 </head>
@@ -467,7 +468,7 @@ button { font: inherit; cursor: pointer; }
     </nav>
 
     <div class="header-cta">
-      <a href="#faq" class="btn btn-secondary btn-sm"><span>Learn more</span></a>
+      <a href="#faq" class="btn btn-secondary btn-sm" style="border-color: rgb(255, 255, 255)"><span><span style="color: rgb(255, 255, 255)">Learn more</span></span></a>
       <a href="#contact" class="btn btn-primary btn-sm">Request appointment</a>
     </div>
 
@@ -504,7 +505,7 @@ button { font: inherit; cursor: pointer; }
     <p style="color: rgb(225, 233, 239)">A Joint Commission‑accredited, Medicare‑approved ambulatory surgery center where board‑certified surgeons across ten specialties deliver same‑day procedures with concierge attention.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-primary">Request appointment</a>
-      <a href="#about" class="btn btn-secondary"><span>Learn more</span></a>
+      <a href="#about" class="btn btn-secondary" style="color: rgb(246, 253, 254)"><span>Learn more</span></a>
     </div>
   </div>
 </section>
@@ -522,7 +523,7 @@ button { font: inherit; cursor: pointer; }
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Foundation</span>
-      <h2 class="h2">What sets us apart</h2>
+      <h2 class="h2">What Sets Us Apart</h2>
       <p>Three reasons patients choose Culver City Surgical Specialists for their care.</p>
     </div>
     <div class="features-grid">
@@ -571,7 +572,7 @@ button { font: inherit; cursor: pointer; }
 .spec-card li:first-child { border-top: none; }
 .spec-card li.proc { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; cursor: pointer; padding-left: 0; padding-right: 0; transition: color 160ms ease, padding 160ms ease; }
 .spec-card li.proc .proc-chev { font-size: 1.1rem; opacity: 0; transform: translateX(-4px); transition: opacity 160ms ease, transform 160ms ease, color 160ms ease; color: var(--pelorous); }
-.spec-card li.proc:hover { color: var(--pelorous-darker); }
+.spec-card li.proc:hover { color: var(--accent-text); }
 .spec-card li.proc:hover .proc-chev,
 .spec-card li.proc:focus-visible .proc-chev { opacity: 1; transform: translateX(0); }
 .spec-card li.proc:focus-visible { outline: 2px solid var(--pelorous); outline-offset: 2px; border-radius: 4px; }
@@ -584,7 +585,7 @@ button { font: inherit; cursor: pointer; }
 .proc-dialog { position: relative; background: var(--white); border-radius: var(--radius-card); max-width: 560px; width: 100%; padding: 2.25rem 2.25rem 1.75rem; box-shadow: 0 40px 80px -20px rgba(2,3,4,0.4); animation: pmRise 260ms cubic-bezier(.2,.7,.2,1); max-height: 90vh; overflow-y: auto; }
 @keyframes pmFade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes pmRise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-.proc-dialog .pm-eyebrow { font-family: "Fraunces", serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pelorous-darker); margin-bottom: 0.5rem; }
+.proc-dialog .pm-eyebrow { font-family: "Fraunces", serif; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 0.5rem; }
 .proc-dialog h3 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 1rem; }
 .proc-dialog .pm-body { font-size: 1rem; line-height: 1.6; color: rgba(2,3,4,0.78); white-space: pre-wrap; min-height: 4.5rem; }
 .proc-dialog textarea { width: 100%; min-height: 12rem; font: inherit; font-size: 1rem; line-height: 1.6; padding: 0.85rem 1rem; border: 1px solid var(--border); border-radius: 10px; resize: vertical; background: rgba(0,0,0,0.02); color: inherit; font-family: inherit; }
@@ -604,7 +605,7 @@ button { font: inherit; cursor: pointer; }
 <section class="section scheme-1" id="services" data-screen-label="03 Services">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow" style="color: var(--pelorous-darker)">Services</span>
+      <span class="eyebrow" style="color: var(--accent-text)">Services</span>
       <h2 class="h2">Ten Specialties, 
 One Center</h2>
       <p>A full range of outpatient surgical procedures performed by board‑certified specialists.</p>
@@ -643,7 +644,7 @@ One Center</h2>
       <div class="spec-card">
         <div class="spec-num">07</div>
         <h3>General Surgery</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Bariatric Surgery">Bariatric Surgery<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hernia Repair">Hernia Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hemorrhoid Repair">Hemorrhoid Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Gallbladder Repair (Cholecystectomy)">Gallbladder Repair (Cholecystectomy)<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Bariatric Surgery">Bariatric Surgery<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hernia Repair">Hernia Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hemorrhoid Repair">Hemorrhoid Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Gallbladder Repair (Cholecystectomy)" style="text-align: left">Gallbladder Repair (Cholecystectomy)<span class="proc-chev" aria-hidden="true">›</span></li></ul>
       </div>
       <div class="spec-card">
         <div class="spec-num">08</div>
@@ -658,7 +659,7 @@ One Center</h2>
       <div class="spec-card">
         <div class="spec-num">10</div>
         <h3>Plastic Surgery</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Facelift">Facelift<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Breast Implants, Lifts & Augmentation">Breast Implants, Lifts &amp; Augmentation<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Tummy Tuck">Tummy Tuck<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Liposuction">Liposuction<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+        <ul><li class="proc" tabindex="0" role="button" data-proc="Facelift">Facelift<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Breast Implants, Lifts & Augmentation" style="text-align: left">Breast Implants, Lifts &amp; Augmentation<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Tummy Tuck">Tummy Tuck<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Liposuction">Liposuction<span class="proc-chev" aria-hidden="true">›</span></li></ul>
       </div>
     </div>
     <div style="text-align:center; margin-top: 3rem;">
@@ -673,7 +674,7 @@ One Center</h2>
     <div class="split">
       <img src="reference/images/benefits.png" alt="Recovery space" />
       <div>
-        <span class="eyebrow" style="color: var(--pelorous-darker)">The concierge difference</span>
+        <span class="eyebrow" style="color: var(--accent-text)">The concierge difference</span>
         <h2 class="h2" style="margin: 0.75rem 0 2rem">Care designed around you</h2>
         <div class="benefits-grid">
           <div class="benefit-item">
@@ -988,13 +989,13 @@ One Center</h2>
     <div class="pm-eyebrow" id="pmCategory">Procedure</div>
     <h3 id="pmTitle">—</h3>
     <div class="pm-body" id="pmBody"></div>
-    <textarea id="pmEditor" hidden placeholder="Describe this procedure…"></textarea>
+    <textarea id="pmEditor" hidden placeholder="Describe this procedure…" style="display:none !important"></textarea>
     <div class="pm-meta" id="pmMeta"></div>
-    <div class="pm-actions">
-      <button type="button" class="btn-ghost danger left" id="pmReset" hidden>Reset to default</button>
-      <button type="button" class="btn-ghost" id="pmCancel" hidden>Cancel</button>
-      <button type="button" class="btn btn-secondary" id="pmEdit"><span>Edit description</span></button>
-      <button type="button" class="btn btn-primary" id="pmSave" hidden>Save</button>
+    <div class="pm-actions" style="display:none !important">
+      <button type="button" class="btn-ghost danger left" id="pmReset" hidden style="display:none !important">Reset to default</button>
+      <button type="button" class="btn-ghost" id="pmCancel" hidden style="display:none !important">Cancel</button>
+      <button type="button" class="btn btn-secondary" id="pmEdit" hidden style="display:none !important"><span>Edit description</span></button>
+      <button type="button" class="btn btn-primary" id="pmSave" hidden style="display:none !important">Save</button>
     </div>
   </div>
 </div>
@@ -1004,7 +1005,7 @@ One Center</h2>
 (function () {
   // Toggle to disable description editing in deployed/standalone builds.
   // The standalone bundling step rewrites this to `false` automatically.
-  const EDIT_ENABLED = true; /* EDIT_ENABLED_FLAG */
+  const EDIT_ENABLED = false; /* EDIT_ENABLED_FLAG */
 
   const DEFAULT_DESCRIPTIONS = {
     "Shoulder": "Arthroscopic and open shoulder procedures address rotator cuff tears, labral injuries, impingement, and instability. Small incisions and a fiber‑optic camera allow precise repair with faster recovery than traditional open surgery.",
