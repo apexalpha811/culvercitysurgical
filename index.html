@@ -194,7 +194,8 @@ button { font: inherit; cursor: pointer; }
   width: 40px; height: 40px; align-items: center; justify-content: center;
   background: transparent; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px;
 }
-.menu-btn span { display: block; width: 18px; height: 2px; background: var(--white); transition: transform 200ms ease, opacity 200ms ease; }
+.menu-btn { color: #ffffff; }
+.menu-btn span { display: block; width: 18px; height: 2px; background: #ffffff; transition: transform 200ms ease, opacity 200ms ease; }
 .menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .menu-btn.open span:nth-child(2) { opacity: 0; }
 .menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -203,17 +204,18 @@ button { font: inherit; cursor: pointer; }
 .mobile-nav {
   display: none;
   position: absolute; left: 0; right: 0; top: 100%;
-  background: var(--pelorous-darker);
-  color: #ffffff;
-  border-top: 1px solid rgba(255,255,255,0.12);
+  background: #ffffff;
+  color: var(--pelorous-darker);
+  border-top: 1px solid rgba(2,3,4,0.08);
+  box-shadow: 0 14px 30px -18px rgba(2,3,4,0.25);
   padding: 1rem 5% 1.5rem;
 }
 .mobile-nav.open { display: block; }
-.mobile-nav a { display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1rem; color: #ffffff; }
+.mobile-nav a { display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(2,3,4,0.08); font-size: 1rem; color: var(--pelorous-darker); }
 .mobile-nav .row { display: flex; gap: 0.75rem; margin-top: 1rem; }
 .mobile-nav .row a { border-bottom: none; }
-.mobile-nav .btn-secondary { color: #ffffff; border-color: rgba(255,255,255,0.45); }
-.mobile-nav .btn-secondary span { color: #ffffff; }
+.mobile-nav .btn-secondary { color: var(--pelorous-darker); border-color: var(--pelorous-darker); }
+.mobile-nav .btn-secondary span { color: var(--pelorous-darker); }
 @media (min-width: 992px) { .mobile-nav { display: none !important; } }
 
 /* ---------- Hero ---------- */
@@ -506,7 +508,7 @@ button { font: inherit; cursor: pointer; }
   <div class="hero-inner">
     <span class="hero-eyebrow" style="color: rgb(236, 241, 245)">Boutique outpatient surgery — Culver City</span>
     <h1>Expert care.<br/><span class="script">Personal touch.</span></h1>
-    <p style="color: rgb(225, 233, 239)">A Joint Commission‑accredited, Medicare‑approved ambulatory surgery center where board‑certified surgeons across ten specialties deliver same‑day procedures with concierge attention.</p>
+    <p style="color: rgb(225, 233, 239)">A Joint Commission‑accredited, Medicare‑approved ambulatory surgery center where board‑certified surgeons across nine specialties deliver same‑day procedures with concierge attention.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-primary">Request appointment</a>
       <a href="#about" class="btn btn-secondary" style="color: rgb(246, 253, 254)"><span>Learn more</span></a>
@@ -534,8 +536,8 @@ button { font: inherit; cursor: pointer; }
       <article class="card feat-card">
         <div class="feat-card-body" style="text-align: center">
           <span class="eyebrow">Expertise</span>
-          <h3 style="text-align: left">Ten surgical specialties under one roof</h3>
-          <p style="text-align: left">Orthopedics, ENT, gynecology, pain management, GI, podiatry, general surgery, ophthalmology, urology, and plastic surgery.</p>
+          <h3 style="text-align: left">Nine surgical specialties under one roof</h3>
+          <p style="text-align: left">Pain management, orthopedics, podiatry, ENT, general surgery, spine surgery, plastic surgery, GI, and gynecology.</p>
           <a href="#services" class="btn-link">Explore <span aria-hidden="true">→</span></a>
         </div>
         <img src="reference/images/feat-0.png" alt="Surgeon at work" />
@@ -564,23 +566,53 @@ button { font: inherit; cursor: pointer; }
 
 <!-- ============ SERVICES / SPECIALTIES ============ -->
 <style>
-.spec-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+/* === Dark cinematic Services section === */
+#services { background: radial-gradient(1200px 600px at 15% 0%, rgba(124,58,237,0.10), transparent 60%), radial-gradient(900px 500px at 85% 100%, rgba(6,182,212,0.08), transparent 60%), #0A0A0B; color: #fff; position: relative; overflow: hidden; padding: 7rem 0; }
+#services::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 60px 60px; -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%); mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%); pointer-events:none; opacity: 0.5; }
+#services .container { position: relative; z-index: 1; }
+#services .section-head .eyebrow { color: rgba(255,255,255,0.55); }
+#services .section-head h2 { background: linear-gradient(180deg, #fff 0%, #9ca3af 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+#services .section-head p { color: rgba(255,255,255,0.65); }
+
+.spec-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 3rem; }
 @media (min-width: 640px) { .spec-grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 992px) { .spec-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
-.spec-card { border: 1px solid var(--border); border-radius: var(--radius-card); padding: 1.5rem 1.5rem 1.25rem; background: var(--white); display: flex; flex-direction: column; transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease; }
-.spec-card:hover { transform: translateY(-3px); border-color: var(--pelorous); box-shadow: 0 18px 36px -28px rgba(2,3,4,0.25); }
-.spec-card h3 { font-size: var(--text-h6); margin-bottom: 0.75rem; line-height: 1.25; }
-.spec-num { font-family: "Fraunces", serif; font-size: 0.85rem; opacity: 0.5; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-.spec-card ul { list-style: none; padding: 0; margin: 0; }
-.spec-card li { padding: 0.35rem 0; font-size: 0.95rem; opacity: 0.85; border-top: 1px solid rgba(2,3,4,0.06); }
-.spec-card li:first-child { border-top: none; }
-.spec-card li.proc { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; cursor: pointer; padding-left: 0; padding-right: 0; transition: color 160ms ease, padding 160ms ease; }
-.spec-card li.proc .proc-chev { font-size: 1.1rem; opacity: 0; transform: translateX(-4px); transition: opacity 160ms ease, transform 160ms ease, color 160ms ease; color: var(--pelorous); }
-.spec-card li.proc:hover { color: var(--accent-text); }
-.spec-card li.proc:hover .proc-chev,
-.spec-card li.proc:focus-visible .proc-chev { opacity: 1; transform: translateX(0); }
-.spec-card li.proc:focus-visible { outline: 2px solid var(--pelorous); outline-offset: 2px; border-radius: 4px; }
-.spec-card[style*="text-align"] li.proc { text-align: left; }
+@media (min-width: 992px) { .spec-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; } }
+
+.spec-card { position: relative; background: #141416; border: none; border-radius: 18px; padding: 28px; min-height: 280px; display: flex; flex-direction: column; gap: 0.85rem; text-align: left; transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1); isolation: isolate; --card-grad: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06)); box-shadow: none; }
+.spec-card::before { content:""; position:absolute; inset:0; padding:1px; border-radius:inherit; background: var(--card-grad); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none; z-index:1; opacity:0.7; transition: opacity 360ms ease; }
+.spec-card::after { content:""; position:absolute; inset:-2px; border-radius:inherit; background: var(--card-grad); filter: blur(22px); opacity:0.12; z-index:-1; transition: opacity 360ms ease; pointer-events:none; }
+.spec-card:hover { transform: translateY(-6px); box-shadow: none; border-color: transparent; }
+.spec-card:hover::before { opacity: 1; }
+.spec-card:hover::after { opacity: 0.55; }
+
+.spec-card .spec-num { position: absolute; top: 24px; right: 26px; font-family: "Fraunces", serif; font-size: 0.85rem; color: rgba(255,255,255,0.32); letter-spacing: 0.12em; z-index: 2; opacity: 1; margin: 0; padding: 0; }
+.spec-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--card-grad); display: grid; place-items: center; color: #fff; position: relative; z-index: 2; box-shadow: 0 10px 24px -12px rgba(0,0,0,0.6); }
+.spec-icon svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.spec-card h3 { position: relative; z-index: 2; font-family: "Fraunces", serif; font-weight: 500; font-size: 1.4rem; line-height: 1.2; color: #fff; margin: 0; letter-spacing: -0.01em; }
+.spec-card .spec-desc { position: relative; z-index: 2; color: rgba(255,255,255,0.6); font-size: 0.88rem; line-height: 1.55; margin: 0; }
+
+.spec-card ul { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-wrap: wrap; gap: 6px; position: relative; z-index: 2; }
+.spec-card li { padding: 0; opacity: 1; border-top: none; font-size: 0.78rem; }
+.spec-card li.proc { display: inline-flex; align-items: center; gap: 4px; padding: 6px 11px 6px 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; color: rgba(255,255,255,0.82); cursor: pointer; transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease; font-weight: 400; line-height: 1; justify-content: flex-start; }
+.spec-card li.proc:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.24); color: #fff; transform: translateY(-1px); }
+.spec-card li.proc .proc-chev { font-size: 0.85rem; opacity: 0.55; transform: none; transition: opacity 180ms ease, transform 180ms ease; color: currentColor; margin-left: 1px; }
+.spec-card li.proc:hover .proc-chev { opacity: 1; transform: translateX(2px); }
+.spec-card li.proc:focus-visible { outline: 2px solid #67e8f9; outline-offset: 2px; }
+
+/* per-card accent gradients */
+.spec-card.g-pain     { --card-grad: linear-gradient(135deg, #a855f7, #ec4899); }
+.spec-card.g-ortho    { --card-grad: linear-gradient(135deg, #06b6d4, #3b82f6); }
+.spec-card.g-podiatry { --card-grad: linear-gradient(135deg, #10b981, #14b8a6); }
+.spec-card.g-ent      { --card-grad: linear-gradient(135deg, #f59e0b, #f97316); }
+.spec-card.g-general  { --card-grad: linear-gradient(135deg, #ef4444, #f43f5e); }
+.spec-card.g-spine    { --card-grad: linear-gradient(135deg, #6366f1, #8b5cf6); }
+.spec-card.g-plastic  { --card-grad: linear-gradient(135deg, #ec4899, #f43f5e); }
+.spec-card.g-gi       { --card-grad: linear-gradient(135deg, #84cc16, #22c55e); }
+.spec-card.g-gyn      { --card-grad: linear-gradient(135deg, #d946ef, #a855f7); }
+
+#services .services-cta { text-align: center; margin-top: 3.5rem; }
+#services .services-cta .btn-primary { background: #fff; color: #0A0A0B; border-color: #fff; }
+#services .services-cta .btn-primary:hover { background: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.9); }
 
 /* Modal */
 .proc-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 1.5rem; }
@@ -606,67 +638,131 @@ button { font: inherit; cursor: pointer; }
 .pm-edit-toast[data-show="true"] { opacity: 1; transform: translateX(-50%) translateY(-4px); }
 
 </style>
-<section class="section scheme-1" id="services" data-screen-label="03 Services">
+<section class="section" id="services" data-screen-label="03 Services">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow" style="color: var(--accent-text)">Services</span>
-      <h2 class="h2">Ten Specialties, 
+      <span class="eyebrow">Services</span>
+      <h2 class="h2">Nine Specialties,
 One Center</h2>
-      <p>A full range of outpatient surgical procedures performed by board‑certified specialists.</p>
+      <p>A full range of outpatient surgical procedures performed by board‑certified specialists. Tap any procedure for details.</p>
     </div>
-    <div class="spec-grid" style="text-align: center">
-      <div class="spec-card">
+    <div class="spec-grid">
+
+      <div class="spec-card g-pain">
         <div class="spec-num">01</div>
-        <h3>Orthopedic Surgery</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Shoulder">Shoulder<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Elbow">Elbow<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hand">Hand<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Wrist (Carpal Tunnel Release)">Wrist (Carpal Tunnel Release)<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Knee">Knee<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Arthroscopy">Arthroscopy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Microdiscectomy">Microdiscectomy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Fusions">Fusions<span class="proc-chev" aria-hidden="true">›</span></li></ul>
-      </div>
-      <div class="spec-card">
-        <div class="spec-num">02</div>
-        <h3>Gynecology</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Stress Urinary Incontinence">Stress Urinary Incontinence<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Endometriosis Resection">Endometriosis Resection<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Anterior Vaginal Wall Repair">Anterior Vaginal Wall Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Myomectomy Procedures">Myomectomy Procedures<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Posterior Wall Repair">Posterior Wall Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Uterine Ablation">Uterine Ablation<span class="proc-chev" aria-hidden="true">›</span></li></ul>
-      </div>
-      <div class="spec-card">
-        <div class="spec-num">03</div>
-        <h3>Ear, Nose &amp; Throat</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Balloon Sinuplasty">Balloon Sinuplasty<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Rhinoplasty">Rhinoplasty<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Septoplasty">Septoplasty<span class="proc-chev" aria-hidden="true">›</span></li></ul>
-      </div>
-      <div class="spec-card">
-        <div class="spec-num">04</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h3>Pain Management</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Minimally‑Invasive Pain Relief">Minimally‑Invasive Pain Relief<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Rhizotomy">Rhizotomy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Epidural Injection">Epidural Injection<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+        <p class="spec-desc">Image-guided injections, ablations, and minimally-invasive procedures for chronic spine, joint, and nerve pain.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Minimally‑Invasive Pain Relief">Minimally‑Invasive Pain Relief<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Rhizotomy">Rhizotomy<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Epidural Injection">Epidural Injection<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
       </div>
-      <div class="spec-card">
-        <div class="spec-num">05</div>
-        <h3>Gastroenterology (GI)</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Colonoscopy">Colonoscopy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="EGD">EGD<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+
+      <div class="spec-card g-ortho">
+        <div class="spec-num">02</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/></svg></div>
+        <h3>Orthopedic Surgery</h3>
+        <p class="spec-desc">Arthroscopic and open procedures for the shoulder, elbow, hand, wrist, and knee. Restore function with minimal downtime.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Shoulder">Shoulder<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Elbow">Elbow<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Hand">Hand<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Wrist (Carpal Tunnel Release)">Wrist (Carpal Tunnel Release)<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Knee">Knee<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Arthroscopy">Arthroscopy<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
       </div>
-      <div class="spec-card">
-        <div class="spec-num">06</div>
+
+      <div class="spec-card g-podiatry">
+        <div class="spec-num">03</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 5c0-2 .5-3 2-3s2.5 1.5 2.5 4-1 5-2.5 5S14 9 14 7"/><path d="M9 7c0-2.5-1-4-2.5-4S4 4 4 6.5 5 11 6.5 11 9 9.5 9 7"/><path d="M19 12c1.5 0 2 1 2 2.5 0 2-1.5 3.5-3 3.5-1 0-2-.5-2-1.5"/><path d="M7 14c-1.5 0-3 1.5-3 3.5C4 19 5 20 6 20c1 0 2-.5 2-2"/><path d="M10.5 13c0-2.5 1-4 2.5-4s2.5 1.5 2.5 4-1 4-2.5 6c-1 1.3-2.5 1.5-2.5 0"/></svg></div>
         <h3>Foot &amp; Ankle — Podiatry</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Ankle Fracture">Ankle Fracture<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Bunionectomy">Bunionectomy<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hammer Toe Treatment">Hammer Toe Treatment<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Plantar Fasciitis Procedures">Plantar Fasciitis Procedures<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+        <p class="spec-desc">Reconstructive and corrective foot surgery for bunions, hammer toes, fractures, and chronic heel pain.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Ankle Fracture">Ankle Fracture<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Bunionectomy">Bunionectomy<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Hammer Toe Treatment">Hammer Toe Treatment<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Plantar Fasciitis Procedures">Plantar Fasciitis Procedures<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
       </div>
-      <div class="spec-card">
-        <div class="spec-num">07</div>
+
+      <div class="spec-card g-ent">
+        <div class="spec-num">04</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></svg></div>
+        <h3>Ear, Nose &amp; Throat</h3>
+        <p class="spec-desc">Sinus, septum, and nasal procedures that improve breathing, sleep, and facial balance.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Balloon Sinuplasty">Balloon Sinuplasty<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Rhinoplasty">Rhinoplasty<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Septoplasty">Septoplasty<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
+      </div>
+
+      <div class="spec-card g-general">
+        <div class="spec-num">05</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3a1 1 0 0 1-.7.3H4.2a1 1 0 0 1-.7-1.7L13.9 7"/><path d="m13 7 3 3"/></svg></div>
         <h3>General Surgery</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Bariatric Surgery">Bariatric Surgery<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hernia Repair">Hernia Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Hemorrhoid Repair">Hemorrhoid Repair<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Gallbladder Repair (Cholecystectomy)" style="text-align: left">Gallbladder Repair (Cholecystectomy)<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+        <p class="spec-desc">Laparoscopic abdominal and metabolic procedures including hernia repair, gallbladder, and bariatric surgery.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Bariatric Surgery">Bariatric Surgery<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Hernia Repair">Hernia Repair<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Hemorrhoid Repair">Hemorrhoid Repair<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Gallbladder Repair (Cholecystectomy)">Gallbladder Repair<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
       </div>
-      <div class="spec-card">
-        <div class="spec-num">08</div>
-        <h3>Ophthalmology</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Blepharoplasty (Upper & Lower Eyelids)">Blepharoplasty (Upper &amp; Lower Eyelids)<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+
+      <div class="spec-card g-spine">
+        <div class="spec-num">06</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v3"/><path d="M9 5h6l-1 2h-4z"/><path d="M9 9h6l-1 2h-4z"/><path d="M9 13h6l-1 2h-4z"/><path d="M9 17h6l-1 2h-4z"/><path d="M12 21v1"/></svg></div>
+        <h3>Spine Surgery</h3>
+        <p class="spec-desc">Targeted, motion-preserving and stabilizing spinal procedures performed through small incisions for fast recovery.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="1-2 Level Anterior Cervical Discectomy and Fusion">1‑2 Level ACDF<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
       </div>
-      <div class="spec-card">
-        <div class="spec-num">09</div>
-        <h3>Urology</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Urologic procedures">Urologic procedures<span class="proc-chev" aria-hidden="true">›</span></li></ul>
-      </div>
-      <div class="spec-card">
-        <div class="spec-num">10</div>
+
+      <div class="spec-card g-plastic">
+        <div class="spec-num">07</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></div>
         <h3>Plastic Surgery</h3>
-        <ul><li class="proc" tabindex="0" role="button" data-proc="Facelift">Facelift<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Breast Implants, Lifts & Augmentation" style="text-align: left">Breast Implants, Lifts &amp; Augmentation<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Tummy Tuck">Tummy Tuck<span class="proc-chev" aria-hidden="true">›</span></li><li class="proc" tabindex="0" role="button" data-proc="Liposuction">Liposuction<span class="proc-chev" aria-hidden="true">›</span></li></ul>
+        <p class="spec-desc">Facial, breast, and body contouring procedures with a focus on natural, lasting results.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Facelift">Facelift<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Breast Implants, Lifts & Augmentation">Breast Implants &amp; Lifts<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Tummy Tuck">Tummy Tuck<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Liposuction">Liposuction<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
+      </div>
+
+      <div class="spec-card g-gi">
+        <div class="spec-num">08</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 0-4 4v3a3 3 0 0 1-3 3v0a3 3 0 0 1 3 3v0a4 4 0 0 0 4 4h.5a3.5 3.5 0 0 0 3.5-3.5v0a3 3 0 0 1 3-3v0a3 3 0 0 1-3-3v-3a4 4 0 0 0-4-4Z"/></svg></div>
+        <h3>Gastroenterology</h3>
+        <p class="spec-desc">Screening, diagnostic, and therapeutic endoscopy for the upper and lower GI tract.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Colonoscopy">Colonoscopy<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="EGD">EGD<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
+      </div>
+
+      <div class="spec-card g-gyn">
+        <div class="spec-num">09</div>
+        <div class="spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div>
+        <h3>Gynecology</h3>
+        <p class="spec-desc">Minimally-invasive procedures for fibroids, endometriosis, incontinence, and pelvic floor restoration.</p>
+        <ul>
+          <li class="proc" tabindex="0" role="button" data-proc="Stress Urinary Incontinence">Stress Urinary Incontinence<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Endometriosis Resection">Endometriosis Resection<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Anterior Vaginal Wall Repair">Anterior Vaginal Wall Repair<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Myomectomy Procedures">Myomectomy<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Posterior Wall Repair">Posterior Wall Repair<span class="proc-chev" aria-hidden="true">›</span></li>
+          <li class="proc" tabindex="0" role="button" data-proc="Uterine Ablation">Uterine Ablation<span class="proc-chev" aria-hidden="true">›</span></li>
+        </ul>
       </div>
     </div>
-    <div style="text-align:center; margin-top: 3rem;">
+    <div class="services-cta">
       <a href="#contact" class="btn btn-primary">Request appointment</a>
     </div>
   </div>
@@ -1048,6 +1144,8 @@ One Center</h2>
     "Hernia Repair": "Repair of inguinal, umbilical, hiatal, or incisional hernias with mesh reinforcement. Most are performed laparoscopically for a faster, less painful recovery.",
     "Hemorrhoid Repair": "Removal or banding of symptomatic hemorrhoids that cause bleeding, pain, or prolapse. Same‑day procedure with most patients returning to work within a week.",
     "Gallbladder Repair (Cholecystectomy)": "Laparoscopic removal of the gallbladder for gallstones, infection, or biliary dyskinesia. Four small incisions, same‑day discharge, and a return to normal diet within days.",
+
+    "1-2 Level Anterior Cervical Discectomy and Fusion": "Anterior Cervical Discectomy and Fusion (ACDF) treats nerve compression in the neck by removing a damaged disc through a small front‑of‑neck incision, then stabilizing the segment with a spacer and small plate. A well‑tolerated approach for cervical disc herniation, radiculopathy, and myelopathy — most patients return home the same day.",
 
     "Blepharoplasty (Upper & Lower Eyelids)": "Cosmetic and functional eyelid surgery that removes excess skin and fat to restore a rested, youthful appearance and improve vision when sagging skin obstructs the upper visual field.",
 
